@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一帧音效库 - Premiere Pro 音效库扩展</title>
+    <meta name="description" content="一帧音效库是一款面向 Premiere Pro 的专业音效库扩展，支持悬停试听、真实波形、收藏搜索和一键添加到时间线。" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scroll-meter" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="一帧音效库首页">
+        <img src="./assets/yizhen.jpg" alt="" />
+        <span>一帧音效库</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#features">功能</a>
+        <a href="#preview">界面</a>
+        <a href="#install">安装</a>
+        <a href="#faq">问题</a>
+      </nav>
+      <a class="nav-download" href="#download">测试版</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Premiere Pro 音效库扩展 · Windows 版</p>
+          <h1>一帧音效库</h1>
+          <p class="lead">
+            把音效预设放进 PR 面板：悬停试听，真实波形，点击即可添加到时间线。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#download">查看测试版</a>
+            <button class="button secondary" type="button" data-open-demo>查看界面</button>
+          </div>
+          <div class="meta-row">
+            <span>v0.1.0</span>
+            <span>约 242MB</span>
+            <span>Premiere Pro 2019+</span>
+            <span>公开测试版</span>
+          </div>
+          <div class="hero-wave" aria-hidden="true">
+            <i style="--p: 4%; --w: 18%; --h: 36%"></i>
+            <i style="--p: 24%; --w: 10%; --h: 68%"></i>
+            <i style="--p: 39%; --w: 22%; --h: 50%"></i>
+            <i style="--p: 65%; --w: 13%; --h: 76%"></i>
+            <i style="--p: 82%; --w: 8%; --h: 44%"></i>
+          </div>
+          <p class="hint">当前版本暂未做数字签名，首次运行安装包时 Windows 可能出现安全提示。</p>
+        </div>
+
+        <div class="workbench showpiece" aria-label="插件工作台预览">
+          <div class="showpiece-glow" aria-hidden="true"></div>
+          <div class="plugin-window">
+            <div class="plugin-titlebar">
+              <span>一帧音效库</span>
+              <em>Premiere Pro 扩展预览</em>
+            </div>
+            <div class="plugin-ui mini-plugin">
+              <aside class="plugin-sidebar">
+                <strong>搜索</strong>
+                <label class="side-search">搜索音效</label>
+                <strong>出厂预设</strong>
+                <button class="active">全部 <b>128</b></button>
+                <button>冲击 <b>32</b></button>
+                <button>Foley - Human <b>30</b></button>
+                <button>Foley - Industrial <b>29</b></button>
+                <strong>收藏</strong>
+                <button>收藏夹 <b>9</b></button>
+                <button>最近使用 <b>12</b></button>
+                <strong>我的音效</strong>
+                <button>默认收藏 <b>6</b></button>
+                <button>临时项目 <b>4</b></button>
+              </aside>
+              <section class="plugin-main">
+                <div class="plugin-toolbar">
+                  <div class="tab active">常规音效</div>
+                  <div class="tab">工程音效</div>
+                  <select aria-label="标签"><option>全部标签</option></select>
+                  <select aria-label="排序"><option>推荐排序</option></select>
+                </div>
+                <div class="plugin-status">
+                  <span>128 个预设</span>
+                  <span>启用试听</span>
+                  <span>试听音量 70%</span>
+                  <span>卡片大小 220</span>
+                  <span>波形已生成</span>
+                </div>
+                <div class="sound-grid">
+                  <article class="sound-card">
+                    <button class="star">☆</button>
+                    <h4>电影重击</h4>
+                    <div class="card-wave w1"></div>
+                    <div class="card-tags"><span>WAV/MP3</span><span>冲击</span><span>低频</span></div>
+                    <button>添加到时间轴</button>
+                  </article>
+                  <article class="sound-card">
+                    <button class="star">☆</button>
+                    <h4>呼啸转场</h4>
+                    <div class="card-wave w2"></div>
+                    <div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>速度</span></div>
+                    <button>添加到时间轴</button>
+                  </article>
+                  <article class="sound-card">
+                    <button class="star">☆</button>
+                    <h4>金属碰撞</h4>
+                    <div class="card-wave w3"></div>
+                    <div class="card-tags"><span>WAV/MP3</span><span>拟音</span><span>硬质</span></div>
+                    <button>添加到时间轴</button>
+                  </article>
+                  <article class="sound-card">
+                    <button class="star">☆</button>
+                    <h4>低频推进</h4>
+                    <div class="card-wave w4"></div>
+                    <div class="card-tags"><span>PR 工程</span><span>多轨</span><span>预设</span></div>
+                    <button>添加工程内容</button>
+                  </article>
+                </div>
+              </section>
+            </div>
+            <div class="timeline-card" aria-hidden="true">
+              <div class="timeline-ruler">
+                <span>00:00</span>
+                <span>00:08</span>
+                <span>00:16</span>
+              </div>
+              <div class="timeline-track"><i style="--x: 7%; --w: 30%"></i><i style="--x: 50%; --w: 32%"></i></div>
+              <div class="timeline-track"><i style="--x: 20%; --w: 24%"></i><i style="--x: 62%; --w: 26%"></i></div>
+              <b class="playhead"></b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div>
+          <p class="eyebrow">Efficient Editing</p>
+          <h2>高效剪辑</h2>
+          <p>
+            大量音效不再散落在文件夹里。作者提前整理预设，用户打开面板就能按分类试听，并把合适的声音放进时间线。
+          </p>
+        </div>
+        <div class="efficiency-panel" aria-hidden="true">
+          <div class="flow-card source">
+            <b>海量音效</b>
+            <span>常规音效 / 工程音效</span>
+          </div>
+          <div class="flow-card preview">
+            <b>悬停试听</b>
+            <span>波形定位声音起伏</span>
+          </div>
+          <div class="flow-wave">
+            <i style="--a: 12%; --b: 32%; --c: 54%; --d: 71%"></i>
+            <i style="--a: 6%; --b: 18%; --c: 38%; --d: 86%"></i>
+            <i style="--a: 24%; --b: 44%; --c: 64%; --d: 78%"></i>
+          </div>
+          <div class="flow-timeline">
+            <span style="--x: 8%; --w: 24%">电影重击</span>
+            <span style="--x: 42%; --w: 28%">呼啸转场</span>
+            <span style="--x: 68%; --w: 20%">金属碰撞</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-grid" id="features">
+        <article>
+          <span>01</span>
+          <h3>悬停试听</h3>
+          <p>鼠标经过卡片即可播放，离开立即停止，查找过程不打断剪辑节奏。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>真实波形</h3>
+          <p>卡片直接显示声音起伏，冲击点、尾音、节奏密度更容易判断。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>双类型</h3>
+          <p>wav/mp3 可直接添加，prproj 工程音效由作者打包维护。</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>我的音效</h3>
+          <p>用户可上传自己的 wav/mp3，支持重命名、删除和本地保存。</p>
+        </article>
+      </section>
+
+      <section class="section preview-section" id="preview">
+        <div class="section-copy">
+          <p class="eyebrow">Professional Interface</p>
+          <h2>专业化界面设计</h2>
+          <p>
+            页面采用接近 Premiere 的深色面板语言，左侧管理分类、收藏和个人音效，右侧专注展示音效卡片和波形。
+          </p>
+          <ul class="clean-list">
+            <li>出厂预设、收藏夹、我的音效分区管理</li>
+            <li>标签筛选、推荐排序、搜索一起工作</li>
+            <li>试听音量、卡片大小、波形显示可调整</li>
+          </ul>
+        </div>
+        <figure class="preview-frame interface-stage">
+          <div class="stage-badge">可点击演示</div>
+          <div class="plugin-window flat">
+            <div class="plugin-titlebar">
+              <span>一帧音效库</span>
+              <em>标签 · 搜索 · 收藏 · 我的音效</em>
+            </div>
+            <div class="plugin-ui wide-plugin">
+              <aside class="plugin-sidebar">
+                <strong>搜索</strong>
+                <label class="side-search">搜索音效，回车</label>
+                <strong>出厂预设</strong>
+                <button class="active">全部 <b>128</b></button>
+                <button>冲击 <b>32</b></button>
+                <button>Foley - Household <b>28</b></button>
+                <button>Foley - Human <b>30</b></button>
+                <button>Foley - Industrial <b>29</b></button>
+                <strong>收藏</strong>
+                <button>收藏夹 <b>9</b></button>
+                <strong>我的音效</strong>
+                <button>默认收藏 <b>6</b></button>
+              </aside>
+              <section class="plugin-main">
+                <div class="plugin-toolbar">
+                  <div class="tab active">常规音效</div>
+                  <div class="tab">工程音效</div>
+                  <select aria-label="标签"><option>全部标签</option></select>
+                  <select aria-label="排序"><option>推荐排序</option></select>
+                </div>
+                <div class="plugin-status">
+                  <span>启用试听</span>
+                  <span>试听音量 70%</span>
+                  <span>卡片大小 220</span>
+                </div>
+                <div class="tag-row">
+                  <span class="active">全部标签</span>
+                  <span>冲击</span>
+                  <span>重击</span>
+                  <span>转场</span>
+                  <span>氛围</span>
+                </div>
+                <div class="sound-grid dense">
+                  <article class="sound-card"><button class="star">☆</button><h4>能量冲击</h4><div class="card-wave w2"></div><div class="card-tags"><span>冲击</span><span>低频</span></div><button>添加到时间轴</button></article>
+                  <article class="sound-card"><button class="star">☆</button><h4>闪白转场</h4><div class="card-wave w3"></div><div class="card-tags"><span>转场</span><span>速度</span></div><button>添加到时间轴</button></article>
+                  <article class="sound-card"><button class="star">☆</button><h4>玻璃碎裂</h4><div class="card-wave w1"></div><div class="card-tags"><span>拟音</span><span>硬质</span></div><button>添加到时间轴</button></article>
+                  <article class="sound-card"><button class="star">☆</button><h4>远处回响</h4><div class="card-wave w4"></div><div class="card-tags"><span>氛围</span><span>空间</span></div><button>添加到时间轴</button></article>
+                </div>
+              </section>
+            </div>
+          </div>
+          <button class="button primary preview-open" type="button" data-open-demo>打开模拟插件</button>
+        </figure>
+      </section>
+
+      <section class="section install-section" id="install">
+        <div class="section-copy">
+          <p class="eyebrow">Installation</p>
+          <h2>安装流程</h2>
+        </div>
+        <div class="install-steps">
+          <article><b>01</b><span>下载 Windows 安装包</span><small>获取 OneFrameSFX-Setup-0.1.0.exe</small></article>
+          <article><b>02</b><span>双击安装</span><small>默认下一步即可，支持覆盖更新</small></article>
+          <article><b>03</b><span>重启 PR</span><small>让 Premiere Pro 重新读取扩展</small></article>
+          <article><b>04</b><span>打开面板</span><small>窗口 > 扩展 > 一帧音效库</small></article>
+        </div>
+      </section>
+
+      <section class="section compatibility">
+        <div class="compat-copy">
+          <p class="eyebrow">Compatibility</p>
+          <h2>兼容说明</h2>
+        </div>
+        <article>
+          <h3>插件兼容</h3>
+          <p>当前版本面向 Windows 系统，支持 Premiere Pro 2019 及以上版本。</p>
+        </article>
+        <article>
+          <h3>音效兼容</h3>
+          <p>wav/mp3 可作为普通音效使用；工程音效面向 Premiere Pro 2019 及以上版本。</p>
+        </article>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <p class="eyebrow">FAQ</p>
+        <h2>问题</h2>
+        <div class="faq-list">
+          <details open>
+            <summary>安装后找不到扩展怎么办？</summary>
+            <p>重启 Premiere Pro 后，在“窗口 > 扩展”里查找“一帧音效库”。如果仍然没有出现，可以重新运行安装包覆盖安装。</p>
+          </details>
+          <details>
+            <summary>Windows 安全提示正常吗？</summary>
+            <p>当前测试版暂未做数字签名，所以可能出现未知发布者提示。正式售卖前建议增加代码签名证书。</p>
+          </details>
+          <details>
+            <summary>以后怎么更新？</summary>
+            <p>第一版采用覆盖安装。下载新版安装包后双击安装，插件程序和出厂素材会更新。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="download-panel" id="download">
+        <p class="eyebrow">Download</p>
+        <h2>下载 Windows 版</h2>
+        <p>当前版本 v0.1.0，官网先用于内部测试。安装包下载入口会在测试确认后开放。</p>
+        <a class="button primary" href="mailto:oneframe-sfx@example.com">测试版暂不开放下载</a>
+      </section>
+    </main>
+
+    <div class="demo-modal" id="pluginDemo" hidden>
+      <div class="demo-backdrop" data-close-demo></div>
+      <section class="demo-dialog" role="dialog" aria-modal="true" aria-label="一帧音效库模拟体验">
+        <header class="demo-header">
+          <div>
+            <strong>一帧音效库 · 模拟体验</strong>
+            <span>点击卡片按钮，音效会加入下方模拟时间线</span>
+          </div>
+          <button type="button" data-close-demo aria-label="关闭">×</button>
+        </header>
+        <div class="demo-body">
+          <div class="demo-panel plugin-window">
+            <div class="plugin-titlebar">
+              <span>一帧音效库</span>
+              <em>网页演示版 · 不播放真实声音</em>
+            </div>
+            <div class="plugin-ui demo-plugin">
+              <aside class="plugin-sidebar">
+                <strong>搜索</strong>
+                <label class="side-search">搜索音效、分类、标签</label>
+                <strong>出厂预设</strong>
+                <button class="active">全部 <b>128</b></button>
+                <button>冲击 <b>32</b></button>
+                <button>Foley - Household <b>28</b></button>
+                <button>Foley - Human <b>30</b></button>
+                <button>Foley - Industrial <b>29</b></button>
+                <strong>收藏</strong>
+                <button>收藏夹 <b>9</b></button>
+                <button>最近使用 <b>12</b></button>
+                <strong>我的音效</strong>
+                <button>默认文件夹 <b>4</b></button>
+              </aside>
+              <section class="plugin-main">
+                <div class="plugin-toolbar">
+                  <div class="tab active">常规音效</div>
+                  <div class="tab">工程音效</div>
+                  <input id="demoSearch" placeholder="搜索音效、分类、标签" />
+                  <select aria-label="排序"><option>推荐排序</option><option>最近使用</option></select>
+                </div>
+                <div class="plugin-status">
+                  <span>128 个预设</span>
+                  <span>启用试听</span>
+                  <span>试听音量 70%</span>
+                  <span>卡片大小 220</span>
+                </div>
+                <div class="tag-row">
+                  <span class="active">全部标签</span>
+                  <span>冲击</span>
+                  <span>转场</span>
+                  <span>拟音</span>
+                  <span>氛围</span>
+                </div>
+                <div class="sound-grid demo-sounds">
+                  <article class="sound-card" data-name="电影重击"><button class="star">☆</button><h4>电影重击</h4><div class="card-wave w1"></div><div class="card-tags"><span>WAV/MP3</span><span>冲击</span><span>低频</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="呼啸转场"><button class="star">☆</button><h4>呼啸转场</h4><div class="card-wave w2"></div><div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>速度</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="金属碰撞"><button class="star">☆</button><h4>金属碰撞</h4><div class="card-wave w3"></div><div class="card-tags"><span>WAV/MP3</span><span>拟音</span><span>硬质</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="低频推进"><button class="star">☆</button><h4>低频推进</h4><div class="card-wave w4"></div><div class="card-tags"><span>PR 工程</span><span>多轨</span><span>预设</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="空气抽吸"><button class="star">☆</button><h4>空气抽吸</h4><div class="card-wave w2"></div><div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>短促</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="远处回响"><button class="star">☆</button><h4>远处回响</h4><div class="card-wave w1"></div><div class="card-tags"><span>WAV/MP3</span><span>氛围</span><span>空间</span></div><button class="js-add-clip">添加到时间线</button></article>
+                </div>
+              </section>
+            </div>
+          </div>
+          <aside class="demo-timeline">
+            <div class="timeline-head">
+              <strong>模拟剪辑轨道</strong>
+              <span>00:00</span><span>00:08</span><span>00:16</span>
+            </div>
+            <div class="edit-track" data-track="A1"><em>A1</em></div>
+            <div class="edit-track" data-track="A2"><em>A2</em></div>
+            <div class="edit-track" data-track="A3"><em>A3</em></div>
+            <p class="demo-note">提示：这是网站里的交互演示，用来感受插件工作流。</p>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <span>© 2026 一帧音效库</span>
+      <span>Premiere Pro CEP Extension · Windows</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
