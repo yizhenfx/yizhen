@@ -1265,8 +1265,8 @@ h3 {
 }
 
 .demo-body {
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
   max-height: calc(100vh - 126px);
   overflow: auto;
@@ -1274,14 +1274,18 @@ h3 {
 }
 
 .demo-panel {
-  min-height: 500px;
+  flex: 0 0 auto;
+  min-height: 0;
 }
 
 .demo-plugin {
-  min-height: 500px;
+  min-height: auto;
 }
 
 .demo-timeline {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
   border: 1px solid #34414e;
   border-radius: 14px;
   padding: 14px;
@@ -1327,18 +1331,19 @@ h3 {
 
 .clip {
   position: absolute;
+  z-index: 3;
   top: 8px;
   left: var(--left);
   width: var(--width);
   height: 24px;
   display: grid;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: 6px;
   padding: 0 8px;
   color: #06110d;
   background: linear-gradient(90deg, var(--accent), var(--blue));
-  box-shadow: 0 8px 22px rgba(50, 200, 146, 0.18);
+  box-shadow: 0 0 0 1px rgba(50, 200, 146, 0.18), 0 8px 22px rgba(50, 200, 146, 0.28);
   font-size: 12px;
   font-weight: 850;
   animation: clipIn 220ms ease-out;
