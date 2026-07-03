@@ -317,7 +317,7 @@
         <header class="demo-header">
           <div>
             <strong>一帧音效库 · 模拟体验</strong>
-            <span>点击卡片按钮，音效会加入下方模拟时间线</span>
+          <span id="demoFeedback">点击分类、标签、收藏或卡片按钮，界面会即时响应</span>
           </div>
           <button type="button" data-close-demo aria-label="关闭">×</button>
         </header>
@@ -332,45 +332,46 @@
                 <strong>搜索</strong>
                 <label class="side-search">搜索音效、分类、标签</label>
                 <strong>出厂预设</strong>
-                <button class="active">全部 <b>128</b></button>
-                <button>冲击 <b>32</b></button>
-                <button>Foley - Household <b>28</b></button>
-                <button>Foley - Human <b>30</b></button>
-                <button>Foley - Industrial <b>29</b></button>
+                <button class="active" data-demo-filter="all">全部 <b>128</b></button>
+                <button data-demo-filter="冲击">冲击 <b>32</b></button>
+                <button data-demo-filter="拟音">Foley - Household <b>28</b></button>
+                <button data-demo-filter="拟音">Foley - Human <b>30</b></button>
+                <button data-demo-filter="拟音">Foley - Industrial <b>29</b></button>
                 <strong>收藏</strong>
-                <button>收藏夹 <b>9</b></button>
-                <button>最近使用 <b>12</b></button>
+                <button data-demo-view="favorites">收藏夹 <b>9</b></button>
+                <button data-demo-sort="recent">最近使用 <b>12</b></button>
                 <strong>我的音效</strong>
-                <button>默认文件夹 <b>4</b></button>
+                <button data-demo-view="mine">默认文件夹 <b>4</b></button>
               </aside>
               <section class="plugin-main">
                 <div class="plugin-toolbar">
-                  <div class="tab active">常规音效</div>
-                  <div class="tab">工程音效</div>
+                  <button class="tab active" type="button" data-demo-type="regular">常规音效</button>
+                  <button class="tab" type="button" data-demo-type="project">工程音效</button>
                   <input id="demoSearch" placeholder="搜索音效、分类、标签" />
-                  <select aria-label="排序"><option>推荐排序</option><option>最近使用</option></select>
+                  <select id="demoSort" aria-label="排序"><option value="recommend">推荐排序</option><option value="recent">最近使用</option><option value="name">名称排序</option></select>
                 </div>
                 <div class="plugin-status">
-                  <span>128 个预设</span>
-                  <span>启用试听</span>
+                  <span id="demoCount">128 个预设</span>
+                  <button class="status-pill active" type="button" data-toggle-preview>启用试听</button>
                   <span>试听音量 70%</span>
                   <span>卡片大小 220</span>
                 </div>
                 <div class="tag-row">
-                  <span class="active">全部标签</span>
-                  <span>冲击</span>
-                  <span>转场</span>
-                  <span>拟音</span>
-                  <span>氛围</span>
+                  <button class="active" type="button" data-demo-filter="all">全部标签</button>
+                  <button type="button" data-demo-filter="冲击">冲击</button>
+                  <button type="button" data-demo-filter="转场">转场</button>
+                  <button type="button" data-demo-filter="拟音">拟音</button>
+                  <button type="button" data-demo-filter="氛围">氛围</button>
                 </div>
                 <div class="sound-grid demo-sounds">
-                  <article class="sound-card" data-name="电影重击"><button class="star">☆</button><h4>电影重击</h4><div class="card-wave w1"></div><div class="card-tags"><span>WAV/MP3</span><span>冲击</span><span>低频</span></div><button class="js-add-clip">添加到时间线</button></article>
-                  <article class="sound-card" data-name="呼啸转场"><button class="star">☆</button><h4>呼啸转场</h4><div class="card-wave w2"></div><div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>速度</span></div><button class="js-add-clip">添加到时间线</button></article>
-                  <article class="sound-card" data-name="金属碰撞"><button class="star">☆</button><h4>金属碰撞</h4><div class="card-wave w3"></div><div class="card-tags"><span>WAV/MP3</span><span>拟音</span><span>硬质</span></div><button class="js-add-clip">添加到时间线</button></article>
-                  <article class="sound-card" data-name="低频推进"><button class="star">☆</button><h4>低频推进</h4><div class="card-wave w4"></div><div class="card-tags"><span>PR 工程</span><span>多轨</span><span>预设</span></div><button class="js-add-clip">添加到时间线</button></article>
-                  <article class="sound-card" data-name="空气抽吸"><button class="star">☆</button><h4>空气抽吸</h4><div class="card-wave w2"></div><div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>短促</span></div><button class="js-add-clip">添加到时间线</button></article>
-                  <article class="sound-card" data-name="远处回响"><button class="star">☆</button><h4>远处回响</h4><div class="card-wave w1"></div><div class="card-tags"><span>WAV/MP3</span><span>氛围</span><span>空间</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="电影重击" data-tags="冲击 低频" data-type="regular" data-favorite="false" data-mine="false"><button class="star" type="button">☆</button><h4>电影重击</h4><div class="card-wave w1"></div><div class="card-tags"><span>WAV/MP3</span><span>冲击</span><span>低频</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="呼啸转场" data-tags="转场 速度" data-type="regular" data-favorite="false" data-mine="false"><button class="star" type="button">☆</button><h4>呼啸转场</h4><div class="card-wave w2"></div><div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>速度</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="金属碰撞" data-tags="拟音 硬质" data-type="regular" data-favorite="false" data-mine="false"><button class="star" type="button">☆</button><h4>金属碰撞</h4><div class="card-wave w3"></div><div class="card-tags"><span>WAV/MP3</span><span>拟音</span><span>硬质</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="低频推进" data-tags="工程 多轨 预设" data-type="project" data-favorite="false" data-mine="false"><button class="star" type="button">☆</button><h4>低频推进</h4><div class="card-wave w4"></div><div class="card-tags"><span>PR 工程</span><span>多轨</span><span>预设</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="空气抽吸" data-tags="转场 短促" data-type="regular" data-favorite="false" data-mine="true"><button class="star" type="button">☆</button><h4>空气抽吸</h4><div class="card-wave w2"></div><div class="card-tags"><span>WAV/MP3</span><span>转场</span><span>短促</span></div><button class="js-add-clip">添加到时间线</button></article>
+                  <article class="sound-card" data-name="远处回响" data-tags="氛围 空间" data-type="regular" data-favorite="false" data-mine="true"><button class="star" type="button">☆</button><h4>远处回响</h4><div class="card-wave w1"></div><div class="card-tags"><span>WAV/MP3</span><span>氛围</span><span>空间</span></div><button class="js-add-clip">添加到时间线</button></article>
                 </div>
+                <div class="demo-empty" hidden>当前没有匹配音效，点击“全部标签”可恢复显示。</div>
               </section>
             </div>
           </div>
@@ -382,6 +383,10 @@
             <div class="edit-track" data-track="A1"><em>A1</em></div>
             <div class="edit-track" data-track="A2"><em>A2</em></div>
             <div class="edit-track" data-track="A3"><em>A3</em></div>
+            <div class="demo-actions">
+              <button type="button" data-clear-timeline>清空轨道</button>
+              <button type="button" data-demo-random>随机添加</button>
+            </div>
             <p class="demo-note">提示：这是网站里的交互演示，用来感受插件工作流。</p>
           </aside>
         </div>
